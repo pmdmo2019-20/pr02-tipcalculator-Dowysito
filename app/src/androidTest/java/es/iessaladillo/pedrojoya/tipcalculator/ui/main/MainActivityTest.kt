@@ -26,7 +26,7 @@ class MainActivityTest {
     fun should_txtTip_txtTotal_txtPerDiner_and_txtPerDinerRounded_not_be_focusable() {
         onView(withId(R.id.txtTip))
             .check(matches(not(isFocusable())))
-        onView(withId(R.id.txtTotal))
+        onView(withId(R.id.lblTotal))
             .check(matches(not(isFocusable())))
         onView(withId(R.id.txtPerDiner))
             .check(matches(not(isFocusable())))

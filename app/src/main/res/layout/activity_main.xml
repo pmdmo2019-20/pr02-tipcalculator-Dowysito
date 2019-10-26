@@ -4,4 +4,264 @@
      style="@style/Base.TextAppearance.AppCompat.Headline" for EditTexts
      style="@style/Widget.AppCompat.Button.Borderless" for Buttons
 -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/main_margin">
 
+    <EditText
+        android:id="@+id/txtTotal"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:digits="@string/Total_Default"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal|number"
+        android:text="@string/Bill_Default"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/euro3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotal" />
+
+    <TextView
+        android:id="@+id/lblBill"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/lbl_bill"
+        app:layout_constraintEnd_toEndOf="@+id/txtBill"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/euro"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_height="wrap_content"
+        android:text="@string/euro"
+        android:textColor="@android:color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtBill"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_inter_margin"
+        android:text="@string/percent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        app:layout_constraintBaseline_toBaselineOf="@id/txtPercentage"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/euro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/euro"
+        android:textColor="@android:color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTip"
+        app:layout_constraintStart_toEndOf="@+id/txtTip" />
+
+    <EditText
+        android:id="@+id/txtBill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_marginTop="@dimen/main_inter_margin"
+        android:ems="10"
+        android:inputType="numberDecimal|number"
+        android:text="@string/Bill_Default"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/euro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBill" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <EditText
+        android:id="@+id/txtPercentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|number"
+        android:text="@string/txtPercentage"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/percent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPercent" />
+
+    <TextView
+        android:id="@+id/lblPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lblTipPercent"
+        app:layout_constraintEnd_toStartOf="@+id/percent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBill" />
+
+    <EditText
+        android:id="@+id/txtTip"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal|number"
+        android:text="@string/txtTip"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/euro"
+        app:layout_constraintStart_toEndOf="@+id/percent"
+        app:layout_constraintTop_toTopOf="@+id/txtPercentage" />
+
+    <TextView
+        android:id="@+id/lblTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lblTip"
+        app:layout_constraintBottom_toTopOf="@+id/txtTip"
+        app:layout_constraintEnd_toStartOf="@+id/euro2" />
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lblTotal"
+        app:layout_constraintEnd_toStartOf="@+id/euro2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTip" />
+
+    <Button
+        android:id="@+id/btnResetTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="@string/btn_Reset"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
+
+    <TextView
+        android:id="@+id/lblDiners"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_height="wrap_content"
+        android:text="@string/lblDiners"
+        app:layout_constraintEnd_toEndOf="@+id/lblPercent"
+        app:layout_constraintTop_toBottomOf="@+id/btnResetTip" />
+
+    <EditText
+        android:id="@+id/txtDiners"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_inter_margin"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/txtDiners"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDiners" />
+
+    <EditText
+        android:id="@+id/txtPerDiner"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal|number"
+        android:text="@string/Bill_Default"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/euro4"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblPerDiner" />
+
+    <TextView
+        android:id="@+id/lblPerDiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lblPerDiner"
+        app:layout_constraintEnd_toEndOf="@+id/txtPerDiner"
+        app:layout_constraintTop_toTopOf="@+id/lblDiners" />
+
+    <TextView
+        android:id="@+id/euro3"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_height="wrap_content"
+        android:text="@string/euro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTotal"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/euro4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/euro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtPerDiner"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPerDinerRounded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lblPerDinerRound"
+        app:layout_constraintEnd_toStartOf="@+id/euro4"
+        app:layout_constraintTop_toBottomOf="@+id/txtPerDiner" />
+
+    <EditText
+        android:id="@+id/txtPerDinerRounded"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="numberDecimal|number"
+        android:text="@string/Total_Default"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/euro5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPerDinerRounded" />
+
+    <Button
+        android:id="@+id/btnResetDiners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Reset"
+        android:textColor="@color/colorAccent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPerDinerRounded" />
+
+    <TextView
+        android:id="@+id/euro5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/euro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtPerDinerRounded"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

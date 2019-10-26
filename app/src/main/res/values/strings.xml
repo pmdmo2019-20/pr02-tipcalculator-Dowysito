@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Tip Calculator</string>
+    <string name="Bill_Default">0.00</string>
+    <string name="lbl_bill">Bill</string>
+    <string name="euro">€</string>
+    <string name="percent">%</string>
+    <string name="lblTip">Tip</string>
+    <string name="Total_Default">0.00</string>
+    <string name="btn_Reset">Reset</string>
+    <string name="txtPercentage">10.00</string>
+    <string name="lblTipPercent">Tip%</string>
+    <string name="txtTip">0.00</string>
+    <string name="lblTotal">Total</string>
+    <string name="lblDiners">Diners</string>
+    <string name="txtDiners">1</string>
+    <string name="lblPerDiner">PerDiner</string>
+    <string name="lblPerDinerRound">Rounded</string>
 </resources>
